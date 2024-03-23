@@ -37,9 +37,9 @@ const createFile = ( ubication, json ) =>{
     });
 }
 
-const init = async () =>{
+const init = async ( cantidad ) =>{
     try{
-        let data = generateRandomDataByMexico(50000);
+        let data = generateRandomDataByMexico(cantidad);
         let file = await createFile( './data/data.json', data );
 
         console.log('Archivo generado correctamente.');
@@ -48,4 +48,5 @@ const init = async () =>{
     }
 }
 
-init();
+const cantidaDatos = 100;
+init( cantidaDatos );
